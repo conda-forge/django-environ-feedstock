@@ -18,13 +18,11 @@ build:
 
 requirements:
   host:
-    - pip
-    - python
-    - setuptools
+    - python >3.7
+    - pip    
   run:
-    - python
+    - python >3.7
     - django >=1.8
-    - six
 
 about:
   home: https://github.com/joke2k/django-environ
@@ -53,4 +51,7 @@ about:
 extra:
   recipe-maintainers:
     - cshaley
-    - sannykr
+    - rxm7706
+    - millsks
+    - elanqo
+    - zaigner
