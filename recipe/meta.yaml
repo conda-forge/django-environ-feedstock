@@ -1,6 +1,6 @@
 {% set name = "django-environ" %}
-{% set version = "0.4.5" %}
-{% set sha256 = "6c9d87660142608f63ec7d5ce5564c49b603ea8ff25da595fd6098f6dc82afde" %}
+{% set version = "0.8.0" %}
+{% set sha256 = "f77f8890d4cdaf53c3f233bc4367c219d3e8f15073959f8decffc72fd64321c2" %}
 
 package:
   name: {{ name|lower }}
@@ -13,25 +13,23 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - pip
-    - python
-    - setuptools
+    - python >3.7
+    - pip    
   run:
-    - python
+    - python >3.7
     - django >=1.8
-    - six
 
 about:
   home: https://github.com/joke2k/django-environ
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Django-environ allows you to utilize 12factor inspired environment variables to configure your Django application.'
+  summary: Django-environ allows you to utilize 12factor inspired environment variables to configure your Django application.
   description: |
     Django-environ allows you to utilize 12factor inspired environment variables to configure your Django application.
     This module is a merge of:
@@ -54,4 +52,7 @@ extra:
   recipe-maintainers:
     - rxm7706
     - cshaley
-    - sannykr
+    - rxm7706
+    - millsks
+    - elanqo
+    - zaigner
