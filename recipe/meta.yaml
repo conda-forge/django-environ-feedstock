@@ -1,6 +1,6 @@
 {% set name = "django-environ" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "f77f8890d4cdaf53c3f233bc4367c219d3e8f15073959f8decffc72fd64321c2" %}
+{% set version = "0.10.0" %}
+{% set sha256 = "b3559a91439c9d774a9e0c1ced872364772c612cdf6dc919506a2b13f7a77225" %}
 
 package:
   name: {{ name|lower }}
@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - python >3.7
-    - pip    
+    - pip
   run:
     - python >3.7
     - django >=1.8
