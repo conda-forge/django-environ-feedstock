@@ -24,6 +24,14 @@ requirements:
     - python >3.7
     - django >=1.8
 
+test:
+  imports:
+    - environ
+  commands:
+    - pip check
+  requires:
+    - pip
+
 about:
   home: https://github.com/joke2k/django-environ
   license: MIT
