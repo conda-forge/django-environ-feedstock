@@ -1,6 +1,6 @@
 {% set name = "django-environ" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "b3559a91439c9d774a9e0c1ced872364772c612cdf6dc919506a2b13f7a77225" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "b0fb330ad306fd279c4badae067ff99334f2e39e7648949c128119ae16b759b1" %}
 
 package:
   name: {{ name|lower }}
@@ -23,6 +23,14 @@ requirements:
   run:
     - python >3.7
     - django >=1.8
+
+test:
+  imports:
+    - environ
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/joke2k/django-environ
