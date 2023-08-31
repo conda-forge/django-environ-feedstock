@@ -1,6 +1,6 @@
 {% set name = "django-environ" %}
-{% set version = "0.11.0" %}
-{% set sha256 = "b0fb330ad306fd279c4badae067ff99334f2e39e7648949c128119ae16b759b1" %}
+{% set version = "0.11.1" %}
+{% set sha256 = "f50dde64c024dfac76279dfd7dade8da994e376d38c3374623ce99490f1534dd" %}
 
 package:
   name: {{ name|lower }}
