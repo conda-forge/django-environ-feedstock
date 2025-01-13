@@ -1,6 +1,6 @@
 {% set name = "django-environ" %}
-{% set version = "0.11.2" %}
-{% set sha256 = "f32a87aa0899894c27d4e1776fa6b477e8164ed7f6b3e410a62a6d72caaf64be" %}
+{% set version = "0.12.0" %}
+{% set sha256 = "227dc891453dd5bde769c3449cf4a74b6f2ee8f7ab2361c93a07068f4179041a" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -24,6 +24,12 @@ requirements:
   run:
     - python >={{ python_min }}
     - django >=1.8
+    # - sphinx-notfound-page 
+    # - sphinx >=5.0
+    # - setuptools >=71.0.0
+    # - pytest >=4.6.11
+    # - furo >=2024.8.6
+    # - coverage >=5.0a4
 
 test:
   imports:
